@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 /****************************Admin dashboard Routes****************************/
 Route::get('/admin/login', [AdminController::class, 'login']);
+Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
