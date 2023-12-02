@@ -26,3 +26,4 @@ Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
 /****************************Admin Panel Category Routes****************************/
 Route::get('/admin/category', [CategoryController::class, 'index']);
 Route::get('/admin/create-category', [CategoryController::class, 'create']);
+Route::post('/admin/creating-category', [CategoryController::class, 'store']);
