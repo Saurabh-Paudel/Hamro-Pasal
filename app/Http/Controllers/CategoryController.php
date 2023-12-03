@@ -11,12 +11,12 @@ class CategoryController extends Controller
     public function index()
     {
         $category = Category::all();
-        return view('admin.category', compact('category'));
+        return view('admin.category.category', compact('category'));
     }
 
     public function create()
     {
-        return view('admin.create-category');
+        return view('admin.category.create-category');
     }
 
     public function store(Request $request)
@@ -29,12 +29,13 @@ class CategoryController extends Controller
             'status' => $request->status,
             'image' => 'http://localhost:8000' . $imageLocation,
         ]);
+        session()->flash('success', 'Record inserted successfully.');
         return redirect('/admin/category');
     }
     public function edit($id)
     {
         $category = Category::find($id);
-        return view('admin.edit', compact('category'));
+        return view('admin.category.edit', compact('category'));
     }
     public function update(Request $request, $id)
     {
@@ -50,13 +51,14 @@ class CategoryController extends Controller
             'slug' => $request->slug,
             'status' => $request->status,
         ]);
+        session()->flash('success', 'Record updated successfully.');
         return redirect('/admin/category');
     }
     public function delete($id)
     {
         $category = Category::find($id);
         $category->delete();
+        session()->flash('success', 'Record deleted successfully.');
         return redirect('/admin/category');
-
     }
 }
