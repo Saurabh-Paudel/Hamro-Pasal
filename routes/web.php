@@ -27,3 +27,6 @@ Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
 Route::get('/admin/category', [CategoryController::class, 'index']);
 Route::get('/admin/create-category', [CategoryController::class, 'create']);
 Route::post('/admin/creating-category', [CategoryController::class, 'store']);
+Route::get('/admin/category/{id}/edit', [CategoryController::class, 'edit']);
+Route::post('/admin/category/{id}/update', [CategoryController::class, 'update']);
+Route::get('/admin/category/{id}/delete', [CategoryController::class, 'delete']);

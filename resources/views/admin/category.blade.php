@@ -57,10 +57,10 @@
                                         @endif
                                     </td>
                                     <td>
-                                        <a href="#" class="btn btn-primary">
+                                        <a href="/admin/category/{{ $item->id }}/edit" class="btn btn-primary">
                                             <i class="fas fa-edit"></i> Edit
                                         </a>
-                                        <a href="#" class="btn btn-danger">
+                                        <a href="/admin/category/{{ $item->id }}/delete" class="btn btn-danger">
                                             <i class="fas fa-trash"></i> Delete
                                         </a>
                                     </td>

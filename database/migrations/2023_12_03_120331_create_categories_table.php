@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug');
-            $table->string('image')->NULLABLE();
-            $table->string('status')->default('active');
+            $table->string('image')->default(''); // default to an empty string
+            $table->string('status')->default('Active'); // default to 'Active'
             $table->timestamps();
         });
     }
