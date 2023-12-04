@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SubcategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,5 +37,7 @@ Route::get('/admin/category/{id}/delete', [CategoryController::class, 'delete'])
 
 /****************************Admin Panel Sub-Category Routes**********************/
 /****************************Admin Panel Sub-Category Routes Start****************/
-
+Route::get('/admin/sub-category', [SubcategoryController::class, 'index']);
+Route::get('/admin/create-subcategory', [SubcategoryController::class, 'create']);
+Route::post('/admin/creating-sub-category', [SubcategoryController::class, 'store']);
 /****************************Admin Panel Category Routes Ends*********************/

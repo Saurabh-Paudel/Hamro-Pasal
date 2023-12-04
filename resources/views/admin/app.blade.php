@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laravel Shop :: Administrative Panel</title>
+    <title>Hamro Pasal :: Administrative Panel</title>
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -101,7 +101,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="subcategory.html" class="nav-link">
+                            <a href="/admin/sub-category" class="nav-link">
                                 <i class="nav-icon fas fa-file-alt"></i>
                                 <p>Sub Category</p>
                             </a>
