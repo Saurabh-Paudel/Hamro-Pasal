@@ -39,4 +39,14 @@ class SubcategoryController extends Controller
         session()->flash('success', 'Record inserted successfully.');
         return redirect('/admin/sub-category');
     }
+
+    public function edit(Request $request, $id)
+    {
+        {
+            $subCategory = SubCategory::findOrFail($id);
+            $categories = Category::all();
+
+            return view('admin.subcategory.edit', compact('subCategory', 'categories'));
+        }
+    }
 }
