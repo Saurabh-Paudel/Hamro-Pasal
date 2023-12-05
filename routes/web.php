@@ -41,4 +41,6 @@ Route::get('/admin/sub-category', [SubcategoryController::class, 'index']);
 Route::get('/admin/create-subcategory', [SubcategoryController::class, 'create']);
 Route::post('/admin/creating-sub-category', [SubcategoryController::class, 'store']);
 Route::get('/admin/subcategory/{id}/edit', [SubcategoryController::class, 'edit']);
+Route::post('/admin/subcategory/{id}/update', [SubcategoryController::class, 'update']);
+Route::get('/admin/subcategory/{id}/delete', [SubcategoryController::class, 'delete']);
 /****************************Admin Panel Category Routes Ends*********************/

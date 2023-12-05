@@ -19,7 +19,7 @@
         <!-- Main content -->
         <section class="content">
             <!-- Default box -->
-            <form action="/admin/creating-sub-category" method="post">
+            <form action="/admin/subcategory/{{ $subCategory->id }}/update" method="post">
                 @csrf
                 <div class="container-fluid">
                     <div class="card">
