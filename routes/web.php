@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BrandsController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SubcategoryController;
 use Illuminate\Support\Facades\Route;
@@ -43,4 +44,9 @@ Route::post('/admin/creating-sub-category', [SubcategoryController::class, 'stor
 Route::get('/admin/subcategory/{id}/edit', [SubcategoryController::class, 'edit']);
 Route::post('/admin/subcategory/{id}/update', [SubcategoryController::class, 'update']);
 Route::get('/admin/subcategory/{id}/delete', [SubcategoryController::class, 'delete']);
-/****************************Admin Panel Category Routes Ends*********************/
+/****************************Admin Panel Sub-Category Routes Ends*********************/
+
+/****************************Admin Panel Brands Routes**********************/
+/****************************Admin Panel Brands Routes Start****************/
+Route::get('/admin/brands', [BrandsController::class, 'index']);
+/****************************Admin Panel Brands Routes Ends*********************/
