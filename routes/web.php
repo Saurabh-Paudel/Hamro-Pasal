@@ -49,4 +49,9 @@ Route::get('/admin/subcategory/{id}/delete', [SubcategoryController::class, 'del
 /****************************Admin Panel Brands Routes**********************/
 /****************************Admin Panel Brands Routes Start****************/
 Route::get('/admin/brands', [BrandsController::class, 'index']);
+Route::get('/admin/brands/create-brand', [BrandsController::class, 'create']);
+Route::post('/admin/creating-brand', [BrandsController::class, 'store']);
+Route::get('/admin/brands/{id}/edit', [BrandsController::class, 'edit']);
+Route::post('/admin/brands/{id}/update', [BrandsController::class, 'update']);
+Route::get('/admin/brands/{id}/delete', [BrandsController::class, 'delete']);
 /****************************Admin Panel Brands Routes Ends*********************/
